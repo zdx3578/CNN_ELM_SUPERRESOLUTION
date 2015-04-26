@@ -1,0 +1,10 @@
+for k=1:8
+    disp(D(k).name);
+    im=double(imread([pname '/' D(k).name]));
+    
+    for i=2:31
+        for j=2:3
+            T((k-1)*(Him-2)*(Wim-2)+((i-2)*(Wim-2)+(j-1)),1)=im(i,j);
+        end;
+    end;
+end;
